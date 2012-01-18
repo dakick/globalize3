@@ -45,7 +45,7 @@ module Globalize
             klass = self.const_set(:Translation, Class.new(Globalize::ActiveRecord::Translation))
           end
 
-          klass.establish_connection self.connection.instance_variable_get(:@config)
+#          klass.establish_connection self.connection.instance_variable_get(:@config)
           klass.set_table_name self.translation_options[:table_name]
           klass.belongs_to name.underscore.gsub('/', '_')
           klass
